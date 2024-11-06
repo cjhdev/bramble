@@ -1,0 +1,19 @@
+require 'bramble_client'
+require 'minitest/spec'
+require 'logger'
+
+task :default => [:test]
+
+task :test do
+
+  Thread.abort_on_exception=true
+
+  require_relative 'test/command_test'
+  require_relative 'test/event_test'
+  require_relative 'test/log_test'
+  require_relative 'test/close_test'
+  require_relative 'test/exception_test'
+
+  Minitest.run
+
+end

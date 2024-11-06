@@ -1,0 +1,4 @@
+source 'https://rubygems.org'
+
+gem 'minitest'
+gem 'bramble_client', path: "../../ruby/bramble_client"
